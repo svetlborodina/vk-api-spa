@@ -54,8 +54,7 @@
         },
         methods: {
             async leaveGroups() {
-                const response = (await axios.post(`/group/leave?userId=${this.userId}`, {ExcludesIdsStr: this.excludeIds}, { headers: { 'content-type': 'application/json' } })).data;
-                debugger;
+                (await axios.post(`/group/leave?userId=${this.userId}`, {ExcludesIdsStr: this.excludeIds}, { headers: { 'content-type': 'application/json' } })).data;
             }
         }
     }

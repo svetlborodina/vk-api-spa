@@ -75,7 +75,7 @@ namespace VkApiSPA.Services
         private AllGroupsResponse ParseAllGroupsResponse(HttpResponseMessage response)
         {
             var json = response.Content.ReadAsStringAsync().Result;
-            var obj = JsonSerializer.Deserialize<AllGroupsResponse>(json);
+            var obj = JsonSerializer.Deserialize<AllGroupsResponse>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
             return obj;
         }

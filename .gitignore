@@ -1,0 +1,10 @@
+/.vs
+/.idea
+/.vscode
+bin
+logs
+obj
+publishprofiles
+packages
+*.user
+global.json
